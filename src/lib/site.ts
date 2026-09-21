@@ -35,7 +35,7 @@ export const SITE = {
   domain: "smp.infocs.co.kr",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://smp.infocs.co.kr",
   infocsUrl: "https://www.infocs.co.kr/",
-  naverSiteVerification: "8213044c21e67a7afccc3d4450aa57d5c9a810d5",
+  naverSiteVerification: "97c0bc481dab98e58bc823e5cce8e0bc715e0a37",
   themeColor: "#141820",
 } as const;
 
