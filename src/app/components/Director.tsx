@@ -54,16 +54,16 @@ const GROUPS = [
 
 export default function Director() {
   return (
-    <section id="director" className="section bg-white/55">
+    <section id="director" className="section bg-white/60">
       <div className="container">
         <div className="mx-auto max-w-2xl text-center">
           <p className="section-kicker">DIRECTOR</p>
           <h2 className="mt-3 text-3xl font-bold text-[var(--navy)] md:text-4xl">
-            대표원장 이력
+            평택점 대표원장 프로필
           </h2>
           <p className="mt-3 text-[var(--muted)]">
-            필릭스스칼프 본점·아카데미를 운영하는 대표원장 이력입니다. 두피문신 시술과
-            교육을 함께 진행합니다.
+            평택 비전동 스튜디오를 운영하는 대표원장의 경력입니다. 평택두피문신 시술과
+            아카데미 교육을 직접 진행합니다.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function Director() {
           {GROUPS.map((g) => (
             <div
               key={g.title}
-              className="border border-[var(--line)] bg-white px-5 py-5"
+              className="border border-[var(--line)] bg-white px-5 py-5 shadow-[0_4px_16px_rgba(20,24,32,0.04)]"
             >
               <h3 className="text-sm font-bold tracking-[0.12em] text-[var(--coral-deep)]">
                 {g.title}

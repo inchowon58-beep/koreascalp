@@ -14,7 +14,7 @@ export default function ArticlesScroll({ pages }: { pages: SeoPageSummary[] }) {
           <p className="section-kicker">ARCHIVE</p>
           <h2 className="mt-3 text-2xl font-bold text-[var(--navy)] md:text-3xl">
             <Link href="/guide" className="hover:text-[var(--coral)]">
-              지역별 두피문신 안내
+              평택·경기 지역 두피문신 안내
             </Link>
           </h2>
           <p className="mt-3 text-[var(--muted)]">발행된 지역 안내 글이 여기에 노출됩니다.</p>
@@ -29,7 +29,7 @@ export default function ArticlesScroll({ pages }: { pages: SeoPageSummary[] }) {
         <p className="section-kicker">ARCHIVE</p>
         <h2 className="mt-3 text-2xl font-bold text-[var(--navy)] md:text-3xl">
           <Link href="/guide" className="hover:text-[var(--coral)]">
-              지역별 두피문신 안내
+              평택·경기 지역 두피문신 안내
           </Link>
         </h2>
         <p className="mt-3 text-[var(--muted)]">

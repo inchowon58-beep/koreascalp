@@ -1,17 +1,17 @@
 import { SITE } from "./site";
 
-/** 히어로·소개·시술 카드 · 갤러리 상단 2장 */
-export const FEATURE_FILES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] as const;
+/** 히어로·소개·시술 카드용 (순서 변경) */
+export const FEATURE_FILES = [3, 2, 8, 4, 7, 1, 5, 6, 9, 10, 11] as const;
 
-/** 시술·교육 사진 상단 두 장 */
-export const GALLERY_FEATURED = [77, 78] as const;
+/** 갤러리 상단 두 장 (유효 파일 번호) */
+export const GALLERY_FEATURED = [11, 15] as const;
 
-/** 시술 갤러리 본문 12장 (12번부터) */
-export const GALLERY_GRID = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23] as const;
+/** 갤러리 본문 12장 — 순서 재배치 */
+export const GALLERY_GRID = [18, 20, 22, 25, 27, 29, 31, 13, 17, 19, 21, 23] as const;
 
 function clampFile(num: number): number {
   if (!Number.isFinite(num) || num < 1) return 1;
-  return Math.floor(num);
+  return Math.min(Math.floor(num), SITE.imageCount);
 }
 
 export function fileUrl(fileNo: number): string {
@@ -90,10 +90,10 @@ export function pickImages(count: number, seed = 42): string[] {
 
 export function galleryAlt(keywordOrIndex: string | number, index = 1): string {
   const suffixes = [
-    "두피문신 시술",
+    "평택두피문신 시술",
     "SMP 디자인",
-    "두피문신 교육",
-    "상담 안내",
+    "평택 두피문신 교육",
+    "비전동 상담",
     "사후관리",
   ];
   if (typeof keywordOrIndex === "number") {

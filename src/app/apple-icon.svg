@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="필릭스스칼프">
-  <rect width="180" height="180" rx="22" fill="#2a201c"/>
-  <circle cx="62" cy="78" r="9" fill="#c45c4a"/>
-  <circle cx="90" cy="62" r="9" fill="#e8cfc4"/>
-  <circle cx="118" cy="78" r="9" fill="#c45c4a"/>
-  <circle cx="72" cy="106" r="7.5" fill="#8a6a58"/>
-  <circle cx="108" cy="106" r="7.5" fill="#8a6a58"/>
-  <circle cx="90" cy="128" r="7" fill="#d4a090"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="평택두피문신 필릭스스칼프">
+  <rect width="180" height="180" rx="22" fill="#141820"/>
+  <circle cx="62" cy="78" r="9" fill="#b8956a"/>
+  <circle cx="90" cy="62" r="9" fill="#d4bc7a"/>
+  <circle cx="118" cy="78" r="9" fill="#b8956a"/>
+  <circle cx="72" cy="106" r="7.5" fill="#64748b"/>
+  <circle cx="108" cy="106" r="7.5" fill="#64748b"/>
+  <circle cx="90" cy="128" r="7" fill="#967648"/>
 </svg>

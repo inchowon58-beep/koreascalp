@@ -18,7 +18,7 @@ export default function GuideHeroThumb({ page, imageSrc }: Props) {
   const real = isRealImage(imageSrc);
 
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-[720px] overflow-hidden rounded-[0.45rem] shadow-[0_18px_44px_rgba(42,32,28,0.22)] ring-1 ring-[#c45c4a]/35">
+    <div className="relative mx-auto aspect-square w-full max-w-[720px] overflow-hidden rounded-[0.65rem] shadow-[0_18px_44px_rgba(20,24,32,0.22)] ring-1 ring-[#b8956a]/35">
       {real ? (
         <Image
           src={imageSrc}
@@ -32,7 +32,7 @@ export default function GuideHeroThumb({ page, imageSrc }: Props) {
       ) : (
         <ImageSlot index={placeholderIndexFrom(imageSrc || 1)} fill label={galleryAlt(page.keyword, 1)} />
       )}
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(42,32,28,0.12)_0%,rgba(31,23,20,0.62)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,24,32,0.12)_0%,rgba(20,24,32,0.62)_100%)]" />
 
       <div className="absolute inset-0 flex flex-col items-start justify-end px-7 pb-8 text-left md:px-10 md:pb-10">
         <span className="rounded-full bg-white/92 px-3 py-1 text-[0.68rem] font-semibold tracking-[0.12em] text-[var(--coral-deep)] md:text-xs">
@@ -41,7 +41,7 @@ export default function GuideHeroThumb({ page, imageSrc }: Props) {
 
         <h1 className="mt-4 max-w-[16ch] text-[clamp(1.7rem,6vw,2.9rem)] font-bold leading-[1.25] text-white drop-shadow-[0_3px_10px_rgba(0,0,0,0.4)]">
           <span className="block">{line1}</span>
-          <span className="mt-1 block text-[#e8cfc4]">{line2}</span>
+          <span className="mt-1 block text-[#d4bc7a]">{line2}</span>
         </h1>
 
         <p className="mt-5 max-w-md rounded-2xl bg-black/25 px-4 py-3 text-[0.8rem] font-medium leading-snug text-white/92 md:text-[0.95rem]">

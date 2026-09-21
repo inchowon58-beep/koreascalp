@@ -1,8 +1,8 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { CheckCircle2, MessageCircle, Send } from "lucide-react";
-import { CTA_KAKAO, KAKAO_CTA_HINT, KEYWORD_INQUIRY } from "@/lib/site";
+import { CheckCircle2, MapPin, MessageCircle, Send } from "lucide-react";
+import { CTA_KAKAO, KAKAO_CTA_HINT, KEYWORD_INQUIRY, SITE } from "@/lib/site";
 import { useKakaoHref } from "./KakaoHrefProvider";
 
 type FormState = {
@@ -24,9 +24,9 @@ const initial: FormState = {
 };
 
 const TOPICS = [
-  { id: "시술상담", label: "두피문신 시술 상담" },
-  { id: "교육상담", label: "두피문신 교육 문의" },
-  { id: "방문예약", label: "방문·상담 일정" },
+  { id: "시술상담", label: "평택두피문신 시술 상담" },
+  { id: "교육상담", label: "SMP 교육 문의" },
+  { id: "방문예약", label: "비전동 방문·상담 예약" },
   { id: "기타", label: "기타 문의" },
 ];
 
@@ -63,10 +63,10 @@ export default function ContactForm() {
 
   if (done) {
     return (
-      <section id="contact" className="section bg-white/55">
+      <section id="contact" className="section">
         <div className="container">
-          <div className="mx-auto max-w-lg rounded-[1.4rem] border border-[var(--line)] bg-white p-8 text-center">
-            <CheckCircle2 className="mx-auto text-[var(--sky)]" size={48} />
+          <div className="mx-auto max-w-lg rounded-[0.65rem] border border-[var(--line)] bg-white p-8 text-center shadow-[0_4px_16px_rgba(20,24,32,0.04)]">
+            <CheckCircle2 className="mx-auto text-[var(--coral)]" size={48} />
             <h2 className="mt-4 text-2xl font-extrabold text-[var(--navy)]">문의가 접수되었습니다</h2>
             <p className="mt-3 text-[var(--muted)]">
               확인 후 빠르게 연락드리겠습니다. 급하신 경우 카카오톡 오픈채팅으로도 문의해 주세요.
@@ -97,12 +97,12 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="section bg-white/55">
+    <section id="contact" className="section">
       <div className="container grid gap-10 md:grid-cols-[1fr_1.1fr]">
         <div>
           <p className="section-kicker">CONTACT</p>
           <h2 className="mt-3 text-3xl font-bold text-[var(--navy)] md:text-4xl">
-            언제든 편하게 연락주세요
+            평택두피문신 상담 문의
           </h2>
           <p className="mt-4 text-[var(--muted)]">
             {KEYWORD_INQUIRY}
@@ -110,6 +110,13 @@ export default function ContactForm() {
           <p className="mt-3 text-sm text-[var(--muted)]">
             {KAKAO_CTA_HINT}
           </p>
+          <div className="mt-5 flex items-start gap-2 rounded-[0.65rem] border border-[var(--line)] bg-white px-4 py-3 text-sm text-[var(--muted)]">
+            <MapPin size={16} className="mt-0.5 shrink-0 text-[var(--coral)]" />
+            <span>
+              <strong className="text-[var(--navy)]">{SITE.address}</strong>
+              <span className="mt-0.5 block text-xs">{SITE.location}</span>
+            </span>
+          </div>
           <a
             href={kakaoHref}
             target="_blank"
@@ -121,7 +128,7 @@ export default function ContactForm() {
           </a>
         </div>
 
-        <form onSubmit={onSubmit} className="rounded-[1.4rem] border border-[var(--line)] bg-white p-6 md:p-8">
+        <form onSubmit={onSubmit} className="rounded-[0.65rem] border border-[var(--line)] bg-white p-6 shadow-[0_4px_16px_rgba(20,24,32,0.04)] md:p-8">
           <div className="field">
             <label htmlFor="name">성함</label>
             <input
@@ -143,12 +150,12 @@ export default function ContactForm() {
             />
           </div>
           <div className="field">
-            <label htmlFor="address">지역 (선택)</label>
+            <label htmlFor="address">거주 지역 (선택)</label>
             <input
               id="address"
               value={form.address}
               onChange={(e) => setForm({ ...form, address: e.target.value })}
-              placeholder="예: 수원 / 서울 강남"
+              placeholder="예: 평택 / 안성 / 오산"
             />
           </div>
           <div className="field">
