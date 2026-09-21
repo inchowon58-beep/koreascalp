@@ -80,7 +80,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: page.createdAt,
       modifiedTime: page.updatedAt,
       authors: [SITE.name],
-      section: "두피문신 안내",
+      section: "평택·경기 두피문신 안내",
       tags: keywords.slice(0, 8),
       ...(ogImage
         ? {
@@ -135,7 +135,7 @@ export default async function GuidePage({ params }: Props) {
       {
         "@type": "ListItem",
         position: 2,
-        name: "지역별 두피문신 안내",
+        name: "평택·경기 지역 두피문신 안내",
         item: absoluteUrl(origin, "/guide"),
       },
       {
@@ -201,7 +201,7 @@ export default async function GuidePage({ params }: Props) {
           </Link>
           <span className="mx-2">/</span>
           <Link href="/guide" className="hover:text-[var(--coral)]">
-            지역별 두피문신 안내
+            평택·경기 지역 두피문신 안내
           </Link>
           <span className="mx-2">/</span>
           <span>{page.keyword}</span>
