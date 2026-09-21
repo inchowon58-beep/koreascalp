@@ -19,6 +19,8 @@ export type SeoPage = {
   heroTitleLine1?: string;
   heroTitleLine2?: string;
   heroBar?: string;
+  /** 페이지 상단 지역 소개 (네이버 SEO) */
+  regionInfo?: string;
   sections: {
     h2: string;
     paragraphs: string[];

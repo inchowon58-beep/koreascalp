@@ -80,7 +80,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: page.createdAt,
       modifiedTime: page.updatedAt,
       authors: [SITE.name],
-      section: "평택·경기 두피문신 안내",
+      section: "지역별 두피문신 안내",
       tags: keywords.slice(0, 8),
       ...(ogImage
         ? {
@@ -135,7 +135,7 @@ export default async function GuidePage({ params }: Props) {
       {
         "@type": "ListItem",
         position: 2,
-        name: "평택·경기 지역 두피문신 안내",
+        name: "지역별 두피문신 안내",
         item: absoluteUrl(origin, "/guide"),
       },
       {
@@ -201,7 +201,7 @@ export default async function GuidePage({ params }: Props) {
           </Link>
           <span className="mx-2">/</span>
           <Link href="/guide" className="hover:text-[var(--coral)]">
-            평택·경기 지역 두피문신 안내
+            지역별 두피문신 안내
           </Link>
           <span className="mx-2">/</span>
           <span>{page.keyword}</span>
@@ -210,9 +210,16 @@ export default async function GuidePage({ params }: Props) {
         <p className="mb-2 text-sm font-bold tracking-wide text-[var(--sky)]">
           {page.heroSubtitle}
         </p>
-        <p className="mb-8 text-lg font-semibold leading-snug text-[var(--navy)] md:text-xl">
+        <p className="mb-6 text-lg font-semibold leading-snug text-[var(--navy)] md:text-xl">
           {page.h1}
         </p>
+
+        {page.regionInfo ? (
+          <div className="mb-8 rounded-[0.65rem] border border-[var(--line)] bg-white px-5 py-5 shadow-[0_4px_16px_rgba(20,24,32,0.04)] md:px-6 md:py-6">
+            <p className="text-sm font-bold tracking-wide text-[var(--coral-deep)]">지역 안내</p>
+            <p className="mt-3 leading-relaxed text-[var(--ink)]">{page.regionInfo}</p>
+          </div>
+        ) : null}
 
         <DoodleGalleryCta sponsor={sponsor} slot={1} />
 
